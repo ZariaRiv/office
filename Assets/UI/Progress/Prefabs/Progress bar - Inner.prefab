@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 8852586668583353789}
   - component: {fileID: 3051729243990227488}
   m_Layer: 5
-  m_Name: Progress Bar - Solution 2
+  m_Name: Progress bar - Inner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
