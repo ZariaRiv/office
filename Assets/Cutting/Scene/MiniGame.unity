@@ -268,7 +268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &241566109
 Light:
   m_ObjectHideFlags: 0
@@ -891,6 +891,7 @@ MonoBehaviour:
   - {fileID: 2057167752}
   - {fileID: 1184409189}
   blade: {fileID: 1137102741}
+  communicator: {fileID: 11400000, guid: ced1d0a77312ac94cbca5532511fcc1e, type: 2}
 --- !u!1 &1988133366
 GameObject:
   m_ObjectHideFlags: 0

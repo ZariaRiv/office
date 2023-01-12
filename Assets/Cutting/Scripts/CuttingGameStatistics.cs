@@ -21,6 +21,9 @@ namespace DGP2 {
         [SerializeField]
         private Blade blade;
 
+        [SerializeField]
+        private MinigameCommunicator communicator;
+
         private bool lost = false;
 
         void Awake() {
@@ -35,6 +38,10 @@ namespace DGP2 {
 
         public void Update() {
             Debug.LogFormat(Lost() ? "Lost" : (Won() ? "Won!" : "Game is in progress"));
+
+            if (Won()) {
+                communicator.woodWon();
+            }
         }
 
         public bool Won()

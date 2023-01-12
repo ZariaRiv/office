@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DGP2;
 
 public class UpdateOffice : MonoBehaviour
 {
+    private const string TR = "TR";
+
     // level 1
     public GameObject couchObject;
     
@@ -12,6 +15,8 @@ public class UpdateOffice : MonoBehaviour
 
     // level 3
     public GameObject bookObject;
+
+    public MinigameCommunicator minigameCommunicator;
 
     // level 4
 
@@ -34,7 +39,7 @@ public class UpdateOffice : MonoBehaviour
         
         // level 5
 
-
+        minigameCommunicator.woodWon += () => UpdateOffices(TR);
         Debug.Log("couch is placed");
     }
 
@@ -57,7 +62,7 @@ public class UpdateOffice : MonoBehaviour
     {
         switch(department)
         {
-            case "TR":
+            case TR:
                 if (levelTR < 5){
                     levelTR += 1;
                 }
@@ -109,7 +114,7 @@ public class UpdateOffice : MonoBehaviour
         UpdateLevel(department);
 
         switch(department){
-            case "TR":
+            case TR:
                 switch(levelTR){
                     case 1:
                         //add stuff

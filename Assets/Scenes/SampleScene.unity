@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4721,6 +4721,7 @@ MonoBehaviour:
   couchObject: {fileID: 8075302715336463380, guid: 1228af986d3f13441b5038e297e3fe8b, type: 3}
   snakePlantObject: {fileID: 1659564066806213765, guid: d0e53569b5c51f2459d1b3000a014353, type: 3}
   bookObject: {fileID: 0}
+  minigameCommunicator: {fileID: 11400000, guid: ced1d0a77312ac94cbca5532511fcc1e, type: 2}
   levelTR: 0
   levelCA: 0
   levelMDC: 0
@@ -9616,7 +9617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &963194226
 AudioListener:
   m_ObjectHideFlags: 0
