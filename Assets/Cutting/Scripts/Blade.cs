@@ -201,6 +201,9 @@ namespace BLINDED_AM_ME
                 //leftMeshRenderer.materials = materials.ToArray();
 
                 var rightSide = new GameObject("RightSide");
+                // Improvement: Do only things that will save time, but are functionally equivalent as to try more and experiment and many more.
+                // * Maybe improve when having extra minigame
+                UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(rightSide, UnityEngine.SceneManagement.SceneManager.GetSceneByName("MiniGame"));
                 var rightMeshFilter = rightSide.AddComponent<MeshFilter>();
                 var rightMeshRenderer = rightSide.AddComponent<MeshRenderer>();
 
