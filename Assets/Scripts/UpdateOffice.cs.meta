@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 25a1361bb9b6ae1478f76e50bb407297
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - couchObject: {fileID: 8075302715336463380, guid: 1228af986d3f13441b5038e297e3fe8b, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
