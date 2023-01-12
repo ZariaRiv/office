@@ -4,10 +4,38 @@ using UnityEngine;
 
 public class UpdateOffice : MonoBehaviour
 {
+    // level 1
+    public GameObject couchObject;
+    
+    // level 2
+    public GameObject snakePlantObject;
+
+    // level 3
+    public GameObject bookObject;
+
+    // level 4
+
+    // level 5
+
+
     // Start is called before the first frame update
     void Start()
     {
+        // level 1
+        GameObject couch = Instantiate(couchObject, new Vector3(-3, 0.56f, 40), transform.rotation);
+        couch.transform.Rotate(0, 45, 0);
+
+        // level 2
+        GameObject plant = Instantiate(snakePlantObject, new Vector3(-18.5f, 0f, 40), transform.rotation);
+
+        // level 3
+
+        // level 4
         
+        // level 5
+
+
+        Debug.Log("couch is placed");
     }
 
     // Update is called once per frame
@@ -85,6 +113,10 @@ public class UpdateOffice : MonoBehaviour
                 switch(levelTR){
                     case 1:
                         //add stuff
+
+                        GameObject couch = Instantiate(couchObject, new Vector3(0, 0, 0), transform.rotation);
+                        couch.transform.Rotate(0, 45, 0);
+
                         break;
                     case 2:
                         //more stuff
