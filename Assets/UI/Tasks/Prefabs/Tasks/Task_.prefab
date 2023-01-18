@@ -93,7 +93,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 119.4
+  m_fontSize: 101.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -264,7 +264,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2339707566928686187}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 366339438127106299}
+        m_TargetAssemblyTypeName: tasks_script, Assembly-CSharp
+        m_MethodName: DeclineProject
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4536810469331693006}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4536810469331693006
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,6 +288,7 @@ GameObject:
   - component: {fileID: 4112616193441261442}
   - component: {fileID: 7748450476282461656}
   - component: {fileID: 563303486242922614}
+  - component: {fileID: 366339438127106299}
   m_Layer: 5
   m_Name: Task_
   m_TagString: Untagged
@@ -334,6 +347,18 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &366339438127106299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4536810469331693006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a404a1623e7f2964cbff60c11beb4d8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4621144774225992345
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,7 +517,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1579369008864717681}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 366339438127106299}
+        m_TargetAssemblyTypeName: tasks_script, Assembly-CSharp
+        m_MethodName: AcceptTask
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 4536810469331693006}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6409181170420594964
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,7 +796,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 78.4
+  m_fontSize: 66.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -894,7 +931,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 78.4
+  m_fontSize: 66.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1029,7 +1066,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47
+  m_fontSize: 43.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
