@@ -767,6 +767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minigameCommunicator: {fileID: 11400000, guid: ced1d0a77312ac94cbca5532511fcc1e, type: 2}
   headCamera: {fileID: 963194227}
+  minigames: []
 --- !u!4 &84163789
 Transform:
   m_ObjectHideFlags: 0
@@ -6282,7 +6283,7 @@ PrefabInstance:
     - target: {fileID: 2078691175961785033, guid: e04190a11a4534141aa509a496529b07, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 724184874}
+      objectReference: {fileID: 0}
     - target: {fileID: 2078691175961785033, guid: e04190a11a4534141aa509a496529b07, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayButton
@@ -6410,7 +6411,7 @@ PrefabInstance:
     - target: {fileID: 5448701319101714211, guid: e04190a11a4534141aa509a496529b07, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 724184874}
+      objectReference: {fileID: 0}
     - target: {fileID: 5448701319101714211, guid: e04190a11a4534141aa509a496529b07, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayButton
@@ -7392,7 +7393,7 @@ PrefabInstance:
     - target: {fileID: 2078691175961785033, guid: e04190a11a4534141aa509a496529b07, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 724184874}
+      objectReference: {fileID: 0}
     - target: {fileID: 2078691175961785033, guid: e04190a11a4534141aa509a496529b07, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayButton
@@ -7520,7 +7521,7 @@ PrefabInstance:
     - target: {fileID: 5448701319101714211, guid: e04190a11a4534141aa509a496529b07, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 724184874}
+      objectReference: {fileID: 0}
     - target: {fileID: 5448701319101714211, guid: e04190a11a4534141aa509a496529b07, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayButton
@@ -8990,17 +8991,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2076596081170157495, guid: a2e5c8876fd3eda4693314cd92732455, type: 3}
   m_PrefabInstance: {fileID: 719884957}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &724184874 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5597123799049662271, guid: cbcdded8c1cae514882d46f3b1129615, type: 3}
-  m_PrefabInstance: {fileID: 5597123798359293973}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e260254cc43b4842b88b5b34833eb5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &725803025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17642,7 +17632,7 @@ PrefabInstance:
     - target: {fileID: 2078691175961785033, guid: e04190a11a4534141aa509a496529b07, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 724184874}
+      objectReference: {fileID: 0}
     - target: {fileID: 2078691175961785033, guid: e04190a11a4534141aa509a496529b07, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayButton
@@ -17770,7 +17760,7 @@ PrefabInstance:
     - target: {fileID: 5448701319101714211, guid: e04190a11a4534141aa509a496529b07, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 724184874}
+      objectReference: {fileID: 0}
     - target: {fileID: 5448701319101714211, guid: e04190a11a4534141aa509a496529b07, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PlayButton
@@ -18989,7 +18979,7 @@ MonoBehaviour:
           m_StringArgument: MiniGame
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 724184874}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StartSound, Assembly-CSharp
         m_MethodName: PlayNextLevel
         m_Mode: 1

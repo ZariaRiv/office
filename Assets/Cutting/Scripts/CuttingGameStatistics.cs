@@ -21,9 +21,6 @@ namespace DGP2 {
 
         [SerializeField]
         private Blade blade;
-
-<<<<<<< Updated upstream
-=======
         [SerializeField]
         private MinigameCommunicator communicator;
 
@@ -31,7 +28,6 @@ namespace DGP2 {
         private int maximumCuts = 3;
         private int cuts = 0;
 
->>>>>>> Stashed changes
         private bool lost = false;
 
         void Awake() {
@@ -47,8 +43,6 @@ namespace DGP2 {
 
         public void Update() {
             Debug.LogFormat(Lost() ? "Lost" : (Won() ? "Won!" : "Game is in progress"));
-<<<<<<< Updated upstream
-=======
 
             if (Won()) {
                 communicator.woodWon();
@@ -62,7 +56,6 @@ namespace DGP2 {
                     Debug.Log("Average");
                 }
             }
->>>>>>> Stashed changes
         }
 
         public bool Won()
