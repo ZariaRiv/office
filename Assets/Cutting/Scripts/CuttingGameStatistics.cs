@@ -28,11 +28,12 @@ namespace DGP2 {
         private int maximumCuts = 3;
         private int cuts = 0;
 
-        private bool lost = false;
+        private bool lost = false, won = false;
 
         void Awake() {
             blade.cuttedObject += checkForLose;
             blade.sawed += () => cuts++;
+            // blade.cuttedObject += (e) => Step();
         }
 
         void OnValidate() {
@@ -44,8 +45,8 @@ namespace DGP2 {
         public void Update() {
             Debug.LogFormat(Lost() ? "Lost" : (Won() ? "Won!" : "Game is in progress"));
 
-            if (Won()) {
-                communicator.woodWon();
+            if (Won() && !won) {
+                communicator?.woodWon();
 
                 // Put somewhere else later
                 if (cutsLeft() == 0) {
@@ -55,7 +56,9 @@ namespace DGP2 {
                 } else {
                     Debug.Log("Average");
                 }
+                won = true;
             }
+
         }
 
         public bool Won()

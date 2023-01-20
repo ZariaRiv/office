@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 namespace DGP2 {    
     public class LoadMinigame : MonoBehaviour {
 
         [SerializeField]
-        private MinigameCommunicator minigameCommunicator;
+        public MinigameCommunicator communicator;
 
         [SerializeField]
         private Camera headCamera = Camera.main;
@@ -18,12 +19,13 @@ namespace DGP2 {
         private string currentlyLoadedMinigame;
 
         private void Start() {
-            minigameCommunicator.woodWon += deLoadLast;
+            communicator.wantToReturn += deLoadLast;
+            communicator.woodWon += () => current++;
         }
         
         public void serialMinigames() {
             if (current < minigames.Length) {
-                load(minigames[current++]);
+                load(minigames[current]);
             }
         }
 

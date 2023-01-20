@@ -8,5 +8,10 @@ namespace DGP2 {
     [CreateAssetMenu(menuName = "Communication", fileName = "Minigame")]
     public class MinigameCommunicator : ScriptableObject {
         public Action woodWon; 
+        public Action wantToReturn;
+
+        public void Return() {
+            wantToReturn?.Invoke();
+        }
     }
 }
