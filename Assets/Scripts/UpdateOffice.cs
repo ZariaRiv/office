@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DGP2;
+using DGP;
 
 public class UpdateOffice : MonoBehaviour
 {
+    private const string TR = "TR";
+    public MinigameCommunicator minigameCommunicator;
+    public ProgressVisualiserPrototype progress;
+
     // level 1
     public GameObject couchObject;
     
@@ -21,20 +27,7 @@ public class UpdateOffice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // level 1
-        GameObject couch = Instantiate(couchObject, new Vector3(-3, 0.56f, 40), transform.rotation);
-        couch.transform.Rotate(0, 45, 0);
-
-        // level 2
-        GameObject plant = Instantiate(snakePlantObject, new Vector3(-18.5f, 0f, 40), transform.rotation);
-
-        // level 3
-
-        // level 4
-        
-        // level 5
-
-
+        minigameCommunicator.woodWon += () => UpdateOffices(TR);
         Debug.Log("couch is placed");
     }
 
@@ -57,9 +50,10 @@ public class UpdateOffice : MonoBehaviour
     {
         switch(department)
         {
-            case "TR":
+            case TR:
                 if (levelTR < 5){
                     levelTR += 1;
+                    progress.AddProgress(0.2f);
                 }
                 else {
                     Debug.Log("Level is already at 5, cannot be higher.");
@@ -109,18 +103,19 @@ public class UpdateOffice : MonoBehaviour
         UpdateLevel(department);
 
         switch(department){
-            case "TR":
+            case TR:
                 switch(levelTR){
                     case 1:
                         //add stuff
-
                         GameObject couch = Instantiate(couchObject, new Vector3(0, 0, 0), transform.rotation);
                         couch.transform.Rotate(0, 45, 0);
-
                         break;
+
                     case 2:
                         //more stuff
+                        GameObject plant = Instantiate(snakePlantObject, new Vector3(-18.5f, 0f, 40), transform.rotation);
                         break;
+
                     case 3:
                         //even more stuff
                         break;

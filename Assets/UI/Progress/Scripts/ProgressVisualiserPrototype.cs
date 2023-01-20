@@ -11,11 +11,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// Improvement:
+/// * Make interface
+/// * 
+/// * 
+
 namespace DGP {
 
     public class ProgressVisualiserPrototype : MonoBehaviour {
         
-        public ProgressObserverPrototype progress = new ProgressObserverPrototype();
+        [SerializeField]
+        private ProgressObserverPrototype progress = new ProgressObserverPrototype();
         
         [SerializeField]
         private RectTransform rectTransform;
@@ -35,6 +41,12 @@ namespace DGP {
             anchor.x = progress;
 
             rectTransform.anchorMax = anchor;
+        }
+
+        public void AddProgress(float value) {
+            float currentProgress = progress.getProgress();
+            float finalProgress = currentProgress + value;
+            progress.setProgress(finalProgress);
         }
     }
 }
