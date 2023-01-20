@@ -21,7 +21,7 @@ namespace DGP {
         private RectTransform rectTransform;
 
         public void OnValidate() {
-            rectTransform = this.getObjectInAbsence(rectTransform);
+            rectTransform = this.getMonobehaviourInAbsence(rectTransform);
             updateTransform();
         }
 

@@ -15,7 +15,7 @@ namespace DGP {
 
     public static class Utility {
 
-        public static T getObjectInAbsence<T>(this MonoBehaviour monoBehaviour, in T value) {
+        public static T getMonobehaviourInAbsence<T>(this MonoBehaviour monoBehaviour, in T value) {
             if (value == null && monoBehaviour.TryGetComponent<T>(out T current)) {
                 return current;
             }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using BLINDED_AM_ME;
+using DGP;
 
 /**
  * Name: Laurence van Leuken
@@ -21,20 +22,47 @@ namespace DGP2 {
         [SerializeField]
         private Blade blade;
 
+<<<<<<< Updated upstream
+=======
+        [SerializeField]
+        private MinigameCommunicator communicator;
+
+        [SerializeField]
+        private int maximumCuts = 3;
+        private int cuts = 0;
+
+>>>>>>> Stashed changes
         private bool lost = false;
 
         void Awake() {
-            blade.cutted += checkForLose;
+            blade.cuttedObject += checkForLose;
+            blade.sawed += () => cuts++;
         }
 
         void OnValidate() {
-            if (nonHittables == null) {
-                nonHittables = FindObjectsOfType<NonHittable>();
-            }
+            nonHittables = FindObjectsOfType<NonHittable>();
+            blade = FindObjectOfType<Blade>();
+            // communicator = FindObjectOfType<MinigameCommunicator>(true);
         }
 
         public void Update() {
             Debug.LogFormat(Lost() ? "Lost" : (Won() ? "Won!" : "Game is in progress"));
+<<<<<<< Updated upstream
+=======
+
+            if (Won()) {
+                communicator.woodWon();
+
+                // Put somewhere else later
+                if (cutsLeft() == 0) {
+                    Debug.Log("Was a close one");
+                } else if (cuts == 1) {
+                    Debug.Log("How?");
+                } else {
+                    Debug.Log("Average");
+                }
+            }
+>>>>>>> Stashed changes
         }
 
         public bool Won()
@@ -67,11 +95,15 @@ namespace DGP2 {
         // }
 
         private void checkForLose(GameObject gameObject) {
-            lost |= gameObject.GetComponent<NonHittable>() != null;
+            lost |= gameObject.GetComponent<NonHittable>() != null && cuts <= maximumCuts;
         }
 
         public bool Lost() {
             return lost;
+        }
+
+        public int cutsLeft() {
+            return maximumCuts - cuts;
         }
     }
 }
