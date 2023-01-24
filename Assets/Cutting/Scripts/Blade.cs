@@ -15,7 +15,8 @@ namespace BLINDED_AM_ME
         private const int ACTIVE_PLAY_HEIGHT = 1;
         public Material CapMaterial;
 
-        public Action<GameObject> cutted;
+        public Action<GameObject> cuttedObject;
+        public Action sawed;
 
         [SerializeField]
         private float cutWidth = 0.3f;
@@ -82,7 +83,7 @@ namespace BLINDED_AM_ME
                 // this won't hold up everything
                 // StartCoroutine(CutCoroutine(hit.collider.gameObject, timeLimit));
 
-                cutted?.Invoke(hit.collider.gameObject);
+                cuttedObject?.Invoke(hit.collider.gameObject);
             }
         }
 
@@ -90,8 +91,10 @@ namespace BLINDED_AM_ME
             Vector3 offsetToRight = transform.right * width * 0.5f;
             Vector3 hitPositionLeft = transform.position - offsetToRight;
             Vector3 hitPositionRight = transform.position + offsetToRight;
+            float maxDistance = Vector3.Distance(start, end);
+            // float maxDistance = 500;
 
-            foreach (RaycastHit hit in Physics.RaycastAll(hitPositionLeft, transform.forward)) {
+            foreach (RaycastHit hit in Physics.RaycastAll(hitPositionLeft, transform.forward, maxDistance)) {
                 var timeLimit = new CancellationTokenSource(TimeSpan.FromSeconds(5)).Token;
 
                 GameObject hitGameObject = hit.collider.gameObject;
@@ -108,10 +111,10 @@ namespace BLINDED_AM_ME
                 // this won't hold up everything
                 // StartCoroutine(CutCoroutine(hit.collider.gameObject, timeLimit));
 
-                cutted?.Invoke(hit.collider.gameObject);
+                cuttedObject?.Invoke(hit.collider.gameObject);
             }
 
-            foreach (RaycastHit hit in Physics.RaycastAll(hitPositionRight, transform.forward)) {
+            foreach (RaycastHit hit in Physics.RaycastAll(hitPositionRight, transform.forward, maxDistance)) {
                 var timeLimit = new CancellationTokenSource(TimeSpan.FromSeconds(5)).Token;
 
                 GameObject hitGameObject = hit.collider.gameObject;
@@ -126,8 +129,10 @@ namespace BLINDED_AM_ME
                 // this won't hold up everything
                 // StartCoroutine(CutCoroutine(hit.collider.gameObject, timeLimit));
 
-                cutted?.Invoke(hit.collider.gameObject);
+                cuttedObject?.Invoke(hit.collider.gameObject);
             }
+
+            sawed?.Invoke();
 
             bool inSideSaw(GameObject pieceOfHit) {
                 Vector3 center = Vector3.zero;
@@ -203,7 +208,7 @@ namespace BLINDED_AM_ME
                 var rightSide = new GameObject("RightSide");
                 // Improvement: Do only things that will save time, but are functionally equivalent as to try more and experiment and many more.
                 // * Maybe improve when having extra minigame
-                UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(rightSide, UnityEngine.SceneManagement.SceneManager.GetSceneByName("MiniGame"));
+                UnityEngine.SceneManagement.SceneManager.MoveGameObjectToScene(rightSide, leftSide.scene);
                 var rightMeshFilter = rightSide.AddComponent<MeshFilter>();
                 var rightMeshRenderer = rightSide.AddComponent<MeshRenderer>();
 

@@ -12,10 +12,19 @@ namespace DGP2 {
         [SerializeField]
         private Camera headCamera = Camera.main;
 
+        [SerializeField]
+        private string[] minigames;
+        private int current = 0;
         private string currentlyLoadedMinigame;
 
         private void Start() {
             minigameCommunicator.woodWon += deLoadLast;
+        }
+        
+        public void serialMinigames() {
+            if (current < minigames.Length) {
+                load(minigames[current++]);
+            }
         }
 
         public void load(string scene) {
