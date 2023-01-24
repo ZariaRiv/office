@@ -6381,6 +6381,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Task_TinyHouse
       objectReference: {fileID: 0}
+    - target: {fileID: 4605994193451000424, guid: e04190a11a4534141aa509a496529b07, type: 3}
+      propertyPath: m_fontSize
+      value: 14.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4722054039884351749, guid: e04190a11a4534141aa509a496529b07, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -6411,15 +6415,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4840122538655579146, guid: e04190a11a4534141aa509a496529b07, type: 3}
       propertyPath: m_fontSize
-      value: 11
+      value: 11.45
       objectReference: {fileID: 0}
-    - target: {fileID: 5448701319101714211, guid: e04190a11a4534141aa509a496529b07, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5448701319101714211, guid: e04190a11a4534141aa509a496529b07, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayButton
+    - target: {fileID: 4927753995513488522, guid: e04190a11a4534141aa509a496529b07, type: 3}
+      propertyPath: m_fontSize
+      value: 14.3
       objectReference: {fileID: 0}
     - target: {fileID: 8972093821356957676, guid: e04190a11a4534141aa509a496529b07, type: 3}
       propertyPath: m_AnchorMax.y

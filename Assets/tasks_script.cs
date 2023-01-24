@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class tasks_script : MonoBehaviour
 {
-public void AcceptTask(GameObject thing){
-        Destroy(thing, 1);
+public void AcceptTask(){
+        //Destroy(thing, 1);
         SceneManager.LoadScene("minigame_holder_scene");
     }
 
