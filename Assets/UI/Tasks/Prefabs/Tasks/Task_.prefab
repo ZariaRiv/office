@@ -93,7 +93,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 104.55
+  m_fontSize: 134.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -266,18 +266,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5597123799049662271, guid: cbcdded8c1cae514882d46f3b1129615, type: 3}
-        m_TargetAssemblyTypeName: StartSound, Assembly-CSharp
-        m_MethodName: PlayButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 6653363765639423163}
         m_TargetAssemblyTypeName: tasks_script, Assembly-CSharp
         m_MethodName: DeclineProject
@@ -302,6 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a404a1623e7f2964cbff60c11beb4d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySoundScript: {fileID: 1087670739998421229}
 --- !u!1 &4536810469331693006
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a404a1623e7f2964cbff60c11beb4d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySoundScript: {fileID: 1087670739998421229}
 --- !u!1 &4621144774225992345
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,18 +535,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5597123799049662271, guid: cbcdded8c1cae514882d46f3b1129615, type: 3}
-        m_TargetAssemblyTypeName: StartSound, Assembly-CSharp
-        m_MethodName: PlayButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: PlayButton()
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 4856762229590563202}
         m_TargetAssemblyTypeName: tasks_script, Assembly-CSharp
         m_MethodName: AcceptTask
@@ -581,6 +559,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a404a1623e7f2964cbff60c11beb4d8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mySoundScript: {fileID: 1087670739998421229}
 --- !u!1 &6409181170420594964
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +826,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68.5
+  m_fontSize: 88.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -982,7 +961,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 68.5
+  m_fontSize: 88.6
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1117,7 +1096,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 41.3
+  m_fontSize: 65.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1380,3 +1359,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5597123799049662270, guid: cbcdded8c1cae514882d46f3b1129615, type: 3}
   m_PrefabInstance: {fileID: 4806700583749443538}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1087670739998421229 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5597123799049662271, guid: cbcdded8c1cae514882d46f3b1129615, type: 3}
+  m_PrefabInstance: {fileID: 4806700583749443538}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e260254cc43b4842b88b5b34833eb5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
