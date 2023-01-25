@@ -25,6 +25,9 @@ namespace DGP2 {
         private MinigameCommunicator communicator;
 
         [SerializeField]
+        private int optimalCuts = 1;
+
+        [SerializeField]
         private int maximumCuts = 3;
         private int cuts = 0;
 
@@ -33,7 +36,7 @@ namespace DGP2 {
         void Awake() {
             blade.cuttedObject += checkForLose;
             blade.sawed += () => cuts++;
-            // blade.cuttedObject += (e) => Step();
+            blade.sawed += Step;
         }
 
         void OnValidate() {
@@ -43,6 +46,10 @@ namespace DGP2 {
         }
 
         public void Update() {
+            Step();
+        }
+
+        public void Step() {
             Debug.LogFormat(Lost() ? "Lost" : (Won() ? "Won!" : "Game is in progress"));
 
             if (Won() && !won) {
@@ -51,14 +58,19 @@ namespace DGP2 {
                 // Put somewhere else later
                 if (cutsLeft() == 0) {
                     Debug.Log("Was a close one");
-                } else if (cuts == 1) {
+                } else if (cuts == optimalCuts) {
                     Debug.Log("How?");
-                } else {
+                }  else {
                     Debug.Log("Average");
                 }
                 won = true;
             }
 
+            if (Lost()) {
+                
+                blade.enabled = false;
+                this.enabled = false;
+            }
         }
 
         public bool Won()

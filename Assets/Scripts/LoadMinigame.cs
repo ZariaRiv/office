@@ -11,7 +11,7 @@ namespace DGP2 {
         public MinigameCommunicator communicator;
 
         [SerializeField]
-        private Camera headCamera = Camera.main;
+        private Camera headCamera;
 
         [SerializeField]
         private string[] minigames;
@@ -19,6 +19,7 @@ namespace DGP2 {
         private string currentlyLoadedMinigame;
 
         private void Start() {
+            headCamera = Camera.main;
             communicator.wantToReturn += deLoadLast;
             communicator.woodWon += () => current++;
         }
