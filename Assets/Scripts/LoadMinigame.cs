@@ -31,6 +31,10 @@ namespace DGP2 {
         }
 
         public void load(string scene) {
+            if (currentlyLoadedMinigame != null) {
+                return;
+            }
+
             currentlyLoadedMinigame = scene;
             SceneManager.LoadScene(scene, LoadSceneMode.Additive);
             headCamera.enabled = false;
@@ -38,6 +42,7 @@ namespace DGP2 {
 
         public void deLoadLast() {
             SceneManager.UnloadSceneAsync(currentlyLoadedMinigame);
+            currentlyLoadedMinigame = null;
             headCamera.enabled = true;
         }
     }
