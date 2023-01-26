@@ -732,6 +732,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 011eb3678ece0134f9e363601f6a17d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: ProjectFinished
+  delay: 3
 --- !u!1 &619502768
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,6 +852,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4407257327587424985, guid: cbcdded8c1cae514882d46f3b1129615, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407257327587424985, guid: cbcdded8c1cae514882d46f3b1129615, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5597123799049662268, guid: cbcdded8c1cae514882d46f3b1129615, type: 3}
       propertyPath: m_Name
       value: SoundManager
@@ -1123,6 +1133,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 51059323760202615, guid: 30b465e0588013e428f8df859c21f7ba, type: 3}
   m_PrefabInstance: {fileID: 1234943458}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1234943461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234943460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011eb3678ece0134f9e363601f6a17d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: SampleScene
+  delay: 3
 --- !u!1 &1502189515
 GameObject:
   m_ObjectHideFlags: 0

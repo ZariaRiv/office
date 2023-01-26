@@ -5,15 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class ToWinScreen : MonoBehaviour
 {
+    [SerializeField]
+    private string scene = "ProjectFinished";
+
+    [SerializeField]
+    private float delay;
+
     // Start is called before the first frame update
-    void Start()
-    {
-        SceneManager.LoadScene("ProjectFinished");
+    void Start() {
+        StartCoroutine(loadSceneDelayed(scene, delay));
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private IEnumerator loadSceneDelayed(string scene, float delay) {
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(scene);
     }
 }

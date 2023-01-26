@@ -5481,13 +5481,16 @@ MonoBehaviour:
   snakePlantObject: {fileID: 1659564066806213765, guid: d0e53569b5c51f2459d1b3000a014353, type: 3}
   taskHolder: {fileID: 1004864140}
   headers:
-  - 
-  - 
-  - 
+  - Design Tiny House
+  - Zombie game
+  - Transparent pants
   descriptions:
-  - 
-  - 
-  - 
+  - A couple with a dog wants to have a tiny house built for 20.000 euros.  They
+    want to have it look as modern as possible.
+  - A person observed the recent trend and saw that making zombie games is the new
+    mainstream. Design a game together.
+  - This person wants...transparent pants. Why not? The pants need to be comfortable
+    and ..... of couse transparent!
   levelTR: 0
   levelCA: 0
   levelMDC: 0

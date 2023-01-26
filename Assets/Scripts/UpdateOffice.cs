@@ -74,7 +74,8 @@ public class UpdateOffice : MonoBehaviour
             case TR:
                 if (levelTR < 5){
                     if (levelTR == 2) {
-                        minigameCommunicator.InstantiateTask(taskHolder, headers[Random.Range(0, headers.Length)], descriptions[Random.Range(0, descriptions.Length)]);
+                        int i = Random.Range(0, headers.Length);
+                        minigameCommunicator.InstantiateTask(taskHolder, headers[i], descriptions[i]);
                     }
                     levelTR += 1;
                     progress.AddProgress(0.20f);
