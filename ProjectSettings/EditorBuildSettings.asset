@@ -11,18 +11,30 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cutting/Scene/MiniGame - Level 1.unity
     guid: 940e15e78b6d0e741a6fdacd15ead006
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Cutting/Scene/MiniGame - Level 2.unity
     guid: 0c64344870c28e344a23a6ab8be07129
   - enabled: 1
+    path: Assets/Scenes/minigame_holder_scene.unity
+    guid: b4dbe2593ee96804fadfd770cb4563a8
+  - enabled: 1
+    path: Assets/Cutting/Scene/MiniGame - Level 4.unity
+    guid: 8223d94651b06a0498f57ee8a56d5012
+  - enabled: 1
     path: Assets/Cutting/Scene/MiniGame - Level 3.unity
     guid: 649b2748449ecfd48877b97ecda3eece
   - enabled: 1
-    path: Assets/Cutting/Scene/MiniGame - Level 4.unity
+    path: Assets/Cutting/Scene/MiniGame - Project.unity
     guid: aa4f2c84e23c45e4e88b82fd09fc2fd4
   - enabled: 1
     path: Assets/Cutting/Scene/MiniGame - Level 5.unity
     guid: 970e3098a26ba5c468fa883d9c9f2982
+  - enabled: 1
+    path: Assets/UI/Scenes/ProjectFinished.unity
+    guid: 27d41d9c06d2bb94cb2d692cd331d87b
   - enabled: 1
     path: Assets/Cutting/Scene/Minigame - Not Done.unity
     guid: 7621b29c94cea88468beb2376fc8d27a

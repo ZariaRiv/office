@@ -27,6 +27,11 @@ public class UpdateOffice : MonoBehaviour
     // level 5
     public GameObject snakePlantObject;
 
+    public GameObject taskHolder;
+
+    public string[] headers = new string[0];
+    public string[] descriptions = new string[0];
+
 
     // Start is called before the first frame update
     void Start()
@@ -68,8 +73,11 @@ public class UpdateOffice : MonoBehaviour
         {
             case TR:
                 if (levelTR < 5){
+                    if (levelTR == 2) {
+                        minigameCommunicator.InstantiateTask(taskHolder, headers[Random.Range(0, headers.Length)], descriptions[Random.Range(0, descriptions.Length)]);
+                    }
                     levelTR += 1;
-                    progress.AddProgress(0.2f);
+                    progress.AddProgress(0.20f);
                 }
                 else {
                     Debug.Log("Level is already at 5, cannot be higher.");

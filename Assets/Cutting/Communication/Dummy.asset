@@ -10,6 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e456e01ec602f8b4ab4aaa49c6d48cf7, type: 3}
-  m_Name: Minigame
+  m_Name: Dummy
   m_EditorClassIdentifier: 
-  taskTemplate: {fileID: 4536810469331693006, guid: e04190a11a4534141aa509a496529b07, type: 3}

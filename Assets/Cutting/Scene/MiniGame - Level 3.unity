@@ -1004,7 +1004,10 @@ MonoBehaviour:
   - {fileID: 2021415270}
   blade: {fileID: 1137102741}
   communicator: {fileID: 11400000, guid: ced1d0a77312ac94cbca5532511fcc1e, type: 2}
-  maximumCuts: 3
+  optimalCuts: 2
+  maximumCuts: 5
+  displayer: {fileID: 0}
+  gameObjects: []
 --- !u!1 &1988133366
 GameObject:
   m_ObjectHideFlags: 0

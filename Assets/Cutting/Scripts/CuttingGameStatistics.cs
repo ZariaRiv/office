@@ -31,6 +31,13 @@ namespace DGP2 {
         private int maximumCuts = 3;
         private int cuts = 0;
 
+        [SerializeField]
+        private DisplayMessage displayer;
+
+        [SerializeField]
+        public GameObject[] gameObjects = new GameObject[0];
+        public GameObject[] gameObjectsLose = new GameObject[0];
+
         private bool lost = false, won = false;
 
         void Awake() {
@@ -42,6 +49,9 @@ namespace DGP2 {
         void OnValidate() {
             nonHittables = FindObjectsOfType<NonHittable>();
             blade = FindObjectOfType<Blade>();
+            if (displayer == null) {
+                displayer = FindObjectOfType<DisplayMessage>();
+            }
             // communicator = FindObjectOfType<MinigameCommunicator>(true);
         }
 
@@ -53,23 +63,31 @@ namespace DGP2 {
             Debug.LogFormat(Lost() ? "Lost" : (Won() ? "Won!" : "Game is in progress"));
 
             if (Won() && !won) {
-                communicator?.woodWon();
 
                 // Put somewhere else later
                 if (cutsLeft() == 0) {
-                    Debug.Log("Was a close one");
+                    displayer.displayMessageMomentarely("That was a close one!");
                 } else if (cuts == optimalCuts) {
-                    Debug.Log("How?");
+                    displayer.displayMessageMomentarely("How?!");
                 }  else {
-                    Debug.Log("Average");
+                    displayer.displayMessageMomentarely("Pretty good");
                 }
                 won = true;
+
+                foreach (GameObject obj in gameObjects) {
+                    obj.SetActive(true);
+                }
+                communicator?.woodWon();
             }
 
             if (Lost()) {
-                
+                displayer.displayMessageMomentarely("You tried. That's what counts!");
                 blade.enabled = false;
                 this.enabled = false;
+
+                foreach (GameObject obj in gameObjectsLose) {
+                    obj.SetActive(true);
+                }
             }
         }
 

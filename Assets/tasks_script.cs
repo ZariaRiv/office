@@ -19,7 +19,7 @@ public class tasks_script : MonoBehaviour
                 //Destroy(thing, 1);
                 mySoundScript.PlayButton();
                 // Thread.Sleep(1000);
-                SceneManager.LoadScene("minigame_holder_scene");
+                SceneManager.LoadScene("MiniGame - Project");
         }
 
         public void WinGameButton(){
