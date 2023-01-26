@@ -13,3 +13,8 @@ MonoBehaviour:
   m_Name: Minigame
   m_EditorClassIdentifier: 
   taskTemplate: {fileID: 4536810469331693006, guid: e04190a11a4534141aa509a496529b07, type: 3}
+  levelTR: 0
+  levelCA: 0
+  levelMDC: 0
+  levelUS: 0
+  levelBE: 0

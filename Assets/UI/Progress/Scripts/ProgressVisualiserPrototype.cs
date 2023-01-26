@@ -21,7 +21,7 @@ namespace DGP {
     public class ProgressVisualiserPrototype : MonoBehaviour {
         
         [SerializeField]
-        private ProgressObserverPrototype progress = new ProgressObserverPrototype();
+        public ProgressObserverPrototype progress = new ProgressObserverPrototype();
         
         [SerializeField]
         private RectTransform rectTransform;

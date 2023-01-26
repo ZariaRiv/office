@@ -55,15 +55,9 @@ public class UpdateOffice : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+                    progress.progress.setProgress(minigameCommunicator.levelTR/5f);
         
     }
-
-    // level counters
-    public int levelTR = 0;    // technology & realisation
-    public int levelCA = 0;    // creativity & aesthetics
-    public int levelMDC = 0;   // math, data & computing
-    public int levelUS = 0;    // user & society
-    public int levelBE = 0;    // business & entrepeneurship
 
     // This void can be called whenever a minigame is passed, 
     // it then automatically updates that part of the office
@@ -72,13 +66,13 @@ public class UpdateOffice : MonoBehaviour
         switch(department)
         {
             case TR:
-                if (levelTR < 5){
-                    if (levelTR == 2) {
+                if (minigameCommunicator.levelTR < 5){
+                    if (minigameCommunicator.levelTR == 2) {
                         int i = Random.Range(0, headers.Length);
                         minigameCommunicator.InstantiateTask(taskHolder, headers[i], descriptions[i]);
                     }
-                    levelTR += 1;
-                    progress.AddProgress(0.20f);
+                    minigameCommunicator.levelTR += 1;
+                    progress.progress.setProgress(minigameCommunicator.levelTR/5f);
                 }
                 else {
                     Debug.Log("Level is already at 5, cannot be higher.");
@@ -86,8 +80,8 @@ public class UpdateOffice : MonoBehaviour
                 break;
 
             case "CA":
-                if (levelCA < 5){
-                    levelCA += 1;
+                if (minigameCommunicator.levelCA < 5){
+                    minigameCommunicator.levelCA += 1;
                 }
                 else {
                     Debug.Log("Level is already at 5, cannot be higher.");
@@ -95,8 +89,8 @@ public class UpdateOffice : MonoBehaviour
                 break;
 
             case "MDC":
-                if (levelMDC < 5){
-                    levelMDC += 1;
+                if (minigameCommunicator.levelMDC < 5){
+                    minigameCommunicator.levelMDC += 1;
                 }
                 else {
                     Debug.Log("Level is already at 5, cannot be higher.");
@@ -104,8 +98,8 @@ public class UpdateOffice : MonoBehaviour
                 break;
 
             case "US":
-                if (levelUS < 5){
-                    levelUS += 1;
+                if (minigameCommunicator.levelUS < 5){
+                    minigameCommunicator.levelUS += 1;
                 }
                 else {
                     Debug.Log("Level is already at 5, cannot be higher.");
@@ -113,8 +107,8 @@ public class UpdateOffice : MonoBehaviour
                 break;
 
             case "BE":
-                if (levelBE < 5){
-                    levelBE += 1;
+                if (minigameCommunicator.levelBE < 5){
+                    minigameCommunicator.levelBE += 1;
                 }
                 else {
                     Debug.Log("Level is already at 5, cannot be higher.");
@@ -129,7 +123,7 @@ public class UpdateOffice : MonoBehaviour
 
         switch(department){
             case TR:
-                switch(levelTR){
+                switch(minigameCommunicator.levelTR){
                     case 1:
                         //add stuff
                         for (int i = 0; i < 6; i++){

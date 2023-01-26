@@ -31,5 +31,11 @@ namespace DGP2 {
         private void SetDescription(GameObject task, string description) {
             task.GetComponentsInChildren<TMP_Text>()[1].text = description;
         }
+
+            public int levelTR = 0;    // technology & realisation
+    public int levelCA = 0;    // creativity & aesthetics
+    public int levelMDC = 0;   // math, data & computing
+    public int levelUS = 0;    // user & society
+    public int levelBE = 0;    // business & entrepeneurship
     }
 }

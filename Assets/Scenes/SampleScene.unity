@@ -5491,11 +5491,6 @@ MonoBehaviour:
     mainstream. Design a game together.
   - This person wants...transparent pants. Why not? The pants need to be comfortable
     and ..... of couse transparent!
-  levelTR: 0
-  levelCA: 0
-  levelMDC: 0
-  levelUS: 0
-  levelBE: 0
 --- !u!1001 &482482118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10823,8 +10818,8 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.53755784, g: 0.70859605, b: 0.754717, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -10837,7 +10832,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
+  near clip plane: -10
   far clip plane: 1000
   field of view: 61
   orthographic: 1

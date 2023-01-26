@@ -1007,6 +1007,7 @@ MonoBehaviour:
   maximumCuts: 3
   displayer: {fileID: 0}
   gameObjects: []
+  gameObjectsLose: []
 --- !u!1 &1988133366
 GameObject:
   m_ObjectHideFlags: 0

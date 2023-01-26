@@ -44,12 +44,20 @@ namespace DGP2 {
             blade.cuttedObject += checkForLose;
             blade.sawed += () => cuts++;
             blade.sawed += Step;
+            Setup();
         }
 
-        void OnValidate() {
+        void OnValidate()
+        {
+            Setup();
+        }
+
+        private void Setup()
+        {
             nonHittables = FindObjectsOfType<NonHittable>();
             blade = FindObjectOfType<Blade>();
-            if (displayer == null) {
+            if (displayer == null)
+            {
                 displayer = FindObjectOfType<DisplayMessage>();
             }
             // communicator = FindObjectOfType<MinigameCommunicator>(true);
